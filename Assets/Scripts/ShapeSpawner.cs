@@ -37,4 +37,17 @@ public class ShapeSpawner : MonoBehaviour
             spawnedShapes.Dequeue();
         }
     }
+
+    public Shape GetNextShape()
+    {
+        Shape s = null;
+        try {
+            s = spawnedShapes.Peek();
+        }
+        catch (System.InvalidOperationException e)
+        {
+        }
+
+        return s;
+    }
 }
