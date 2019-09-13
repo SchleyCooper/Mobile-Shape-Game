@@ -16,9 +16,8 @@ public class PlayerController : MonoBehaviour
     private float       movement = 0f;
 
     // simulation fields
-    [SerializeField] private Shape       nextShape;
+    private Shape       nextShape;
     private Quaternion  targetRotation = new Quaternion();
-    [SerializeField] private Vector3 targetEulers = new Vector3();
     private float       angle;
 
     [SerializeField] private float rotMatchSpeed = 5.0f;
@@ -44,7 +43,6 @@ public class PlayerController : MonoBehaviour
             if (nextShape)
             {
                 targetRotation = nextShape.transform.rotation;
-                targetEulers = targetRotation.eulerAngles;
                 angle = Quaternion.Angle(transform.rotation, targetRotation);
                 angle = angle * (targetRotation.eulerAngles.z < transform.rotation.eulerAngles.z ? -1 : 1);
             }

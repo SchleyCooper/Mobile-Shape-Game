@@ -448,6 +448,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 600
   touchThresholdFromCenter: 200
+  isDemoMode: 0
+  nextShape: {fileID: 0}
+  targetEulers: {x: 0, y: 0, z: 0}
+  rotMatchSpeed: 5
 --- !u!58 &273220625
 CircleCollider2D:
   m_ObjectHideFlags: 0
